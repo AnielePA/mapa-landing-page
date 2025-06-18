@@ -1,0 +1,495 @@
+@layer reset, base, navegation, components;
+
+@layer reset {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+@layer base {
+    body {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    body,
+    html {
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+@layer navegation {
+
+    nav {
+        display: flex;
+        width: 100%;
+        /* position: absolute; */
+        align-items: center;
+        background-color: #4d601a;
+
+
+
+        .container-nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Raleway', sans-serif;
+            align-items: center;
+            padding: 0 16px;
+            margin: 15px 0;
+
+
+            .container-logo {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                color: #f9f9f9;
+
+                .logo {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                p {
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+            }
+
+            ul {
+                display: none;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        display: flex;
+        gap: 0;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: #4d601a;
+        padding: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: #fbfbfb;
+
+
+            li {
+                padding: 20px;
+                border-bottom: 1.3px solid #bbfc0a;
+            }
+        }
+
+        @media (width >=778px) {
+            display: none;
+        }
+    }
+
+
+    @media (min-width: 778px) {
+
+        nav {
+            position: absolute;
+            background-color: transparent;
+
+            .container-nav {
+                padding: 0px 32px;
+                gap: 50px;
+                justify-content: flex-start;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                /* background-color: transparent; */
+
+                .menu-toggle {
+                    display: none;
+                }
+
+                .menu-main {
+                    display: flex;
+                    gap: 45px;
+                    margin-left: 80px;
+
+                    li {
+                        list-style-type: none;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 400;
+                        position: relative;
+
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 1.8px;
+                            background-color: #fff;
+                        }
+
+                        &:before {
+                            top: 0;
+                            left: 0;
+                        }
+
+                        &:after {
+                            bottom: 0;
+                            right: 0;
+                        }
+
+
+                        &:hover {
+                            &:before {
+                                right: 0;
+                                left: auto;
+                                width: 100%;
+                                background-color: #d5e8de;
+                                transition: 0.3s all ease-in-out;
+                            }
+
+                            &:after {
+                                right: auto;
+                                left: 0;
+                                width: 100%;
+                                background-color: #d5e8de;
+                                transition: 0.3s all ease-in-out;
+                            }
+
+
+                            a {
+                                color: #d5e8de;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@layer components {
+
+    /* ESTILOS BASE (MOBILE-FIRST) */
+    #hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        /* color: #fff; */
+        width: 100%;
+        height: auto;
+        padding: 0 16px;
+        background-color: #ffffff;
+
+    }
+
+    .img-hero-mobile {
+        width: 100%;
+        /* max-width: 777px; */
+        height: auto;
+        object-fit: cover;
+        display: block;
+        /* Exibir apenas no mobile */
+        padding: 0;
+        /* Ajuste de padding para mobile */
+        margin-top: 20px;
+        /* Espaço abaixo do header */
+    }
+
+    .container-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 32px 0;
+        /* Padding reduzido no mobile */
+        width: 100%;
+        /* max-width: 650px; */
+        box-sizing: border-box;
+
+        h1 {
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+
+        button {
+            padding: 13px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #2e3505;
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            border: 0.4px solid #285503;
+            font-size: 17px;
+            font-weight: 800;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+    }
+
+    /* DESKTOP (min-width: 1133px) */
+    @media (min-width: 778px) {
+        #hero {
+            background-image: url(images/passaro3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            align-items: flex-start;
+
+        }
+
+        @media (max-width: 1307px) and (min-width: 778px) {
+            #hero {
+                background-image: url(images/passaro3mobile.jpg);
+            }
+        }
+
+        .img-hero-mobile {
+            display: none;
+            /* Oculta a imagem no desktop */
+        }
+
+        .container-hero {
+            width: 100%;
+            max-width: 850px;
+            padding: 200px 300px 32px 32px;
+            /* margin-left: 60px; */
+            align-items: flex-start;
+            color: #fff;
+
+            h1 {
+                font-size: 25px;
+                margin-bottom: 40px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            button {
+                margin-top: 40px;
+
+                &:hover {
+                    background-color: #7b9d1d;
+                    transform: scale(1.05) translateY(-3px);
+                    box-shadow: 0 5px 15px rgba(42, 157, 143, 0.4);
+                }
+            }
+        }
+    }
+
+    /* AJUSTES ESPECÍFICOS PARA MOBILE (max-width: 1132px) */
+    @media (max-width: 777px) {
+        #hero {
+            background-image: none !important;
+            /* Remove fundo do hero */
+        }
+    }
+}
+
+
+/* 
+@layer components {
+
+    .img-hero-mobile {
+        width: 450px;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        padding: 0 32px;
+    }
+
+    .container-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 200px 32px;
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+        width: 460px;
+
+        h1 {
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+
+        button {
+            padding: 13px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #2e3505;
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            border: 0.4px solid #285503;
+            font-weight: 800;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+        }
+    }
+
+    @media (max-width: 1132px) {
+        #hero {
+            background-image: url(images/passaro3mobile.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+
+
+            .container-hero {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
+                gap: 20px;
+                /* padding: 200px 60px; */
+/* font-family: 'Open Sans', sans-serif;
+                color: #fff;
+                width: 600px;
+
+                h1 {
+                    font-size: 35px;
+                    font-weight: 700;
+                    line-height: 40px;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+                }
+
+                button {
+                    padding: 13px 20px;
+                    border-radius: 20px;
+                    border: none;
+                    background-color: #2e3505;
+                    color: #ffffff;
+                    font-family: 'Raleway', sans-serif;
+                    border: 0.4px solid #285503;
+                    font-weight: 800;
+                    margin-top: 40px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+                }
+            }
+        }
+    }
+
+
+    @media (min-width: 1133px) {
+        #hero {
+            background-image: url(images/passaro3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+
+
+            .container-hero {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
+                gap: 20px;
+                padding: 200px 60px;
+                font-family: 'Open Sans', sans-serif;
+                color: #fff;
+                width: 600px;
+
+                h1 {
+                    font-size: 35px;
+                    font-weight: 700;
+                    line-height: 40px;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+                }
+
+                button {
+                    padding: 13px 20px;
+                    border-radius: 20px;
+                    border: none;
+                    background-color: #2e3505;
+                    color: #ffffff;
+                    font-family: 'Raleway', sans-serif;
+                    border: 0.4px solid #285503;
+                    font-weight: 800;
+                    margin-top: 40px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #7b9d1d;
+                        transform: scale(1.05) translateY(-3px);
+                        box-shadow: 0 5px 15px rgba(42, 157, 143, 0.4);
+                    }
+                }
+            }
+
+        }
+    } */
+
+/*} */
