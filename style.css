@@ -33,9 +33,10 @@
     nav {
         display: flex;
         width: 100%;
-        /* position: absolute; */
+        position: absolute;
         align-items: center;
-        background-color: #4d601a;
+        /* background-color: #4d601a; */
+        background-color: transparent;
 
 
 
@@ -81,7 +82,7 @@
         right: 0;
         flex-direction: column;
         text-align: center;
-        background-color: #4d601a;
+        background-color: #4C6434;
         padding: 0;
         overflow: hidden;
         transition: all 0.5s;
@@ -98,11 +99,15 @@
             flex-direction: column;
             color: #fbfbfb;
 
-
             li {
                 padding: 20px;
-                border-bottom: 1.3px solid #bbfc0a;
+
+
+                &:not(:last-child) {
+                    border-bottom: 1.3px solid #bbfc0a;
+                }
             }
+
         }
 
         @media (width >=778px) {
@@ -118,7 +123,7 @@
             background-color: transparent;
 
             .container-nav {
-                padding: 0px 32px;
+                padding: 0px 44px;
                 gap: 50px;
                 justify-content: flex-start;
                 font-weight: 400;
@@ -204,66 +209,69 @@
 
     /* ESTILOS BASE (MOBILE-FIRST) */
     #hero {
+        background-image: url(images/1750271411483_1nnnm2_2_0.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         font-family: 'Open Sans', sans-serif;
+        /* text-align: justify; */
         /* color: #fff; */
-        width: 100%;
-        height: auto;
-        padding: 0 16px;
-        background-color: #ffffff;
+        /* width: 100%;
+        height: auto; */
+        /* padding: 0 16px; */
+        /* background-color: #ffffff; */
 
     }
 
-    .img-hero-mobile {
+    /* .img-hero-mobile {
         width: 100%;
-        /* max-width: 777px; */
         height: auto;
         object-fit: cover;
         display: block;
-        /* Exibir apenas no mobile */
         padding: 0;
-        /* Ajuste de padding para mobile */
         margin-top: 20px;
-        /* Espaço abaixo do header */
-    }
+    } */
 
     .container-hero {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
-        padding: 32px 0;
+        padding: 265px 16px;
         /* Padding reduzido no mobile */
         width: 100%;
-        /* max-width: 650px; */
+        max-width: 550px;
         box-sizing: border-box;
+        color: #ffffff;
 
         h1 {
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 700;
             line-height: 40px;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
         }
 
         p {
-            font-size: 17px;
+            font-size: 15px;
             font-weight: 600;
             line-height: 24px;
         }
 
         button {
-            padding: 13px 20px;
+            padding: 10px 15px;
             border-radius: 20px;
             border: none;
             background-color: #2e3505;
             color: #ffffff;
             font-family: 'Raleway', sans-serif;
-            border: 0.4px solid #285503;
-            font-size: 17px;
+            font-size: 15px;
             font-weight: 800;
-            margin-top: 10px;
+            /* margin-top: 10px; */
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
@@ -283,49 +291,41 @@
 
         @media (max-width: 1307px) and (min-width: 778px) {
             #hero {
-                background-image: url(images/passaro3mobile.jpg);
+                background-image: url(images/passaro-redimencionado2.JPG);
             }
-        }
-
-        .img-hero-mobile {
-            display: none;
-            /* Oculta a imagem no desktop */
         }
 
         .container-hero {
             width: 100%;
-            max-width: 850px;
+            max-width: 785px;
             padding: 200px 300px 32px 32px;
-            /* margin-left: 60px; */
+            margin-left: 20px;
             align-items: flex-start;
-            color: #fff;
 
             h1 {
-                font-size: 25px;
-                margin-bottom: 40px;
+                font-size: 35px;
+                margin-bottom: 35px;
             }
 
             p {
-                font-size: 18px;
+                font-size: 17.5px;
             }
 
             button {
-                margin-top: 40px;
+                margin-top: 45px;
 
                 &:hover {
                     background-color: #7b9d1d;
                     transform: scale(1.05) translateY(-3px);
-                    box-shadow: 0 5px 15px rgba(42, 157, 143, 0.4);
+                    box-shadow: 0 5px 15px rgba(118, 213, 23, 0.4);
                 }
             }
         }
-    }
 
-    /* AJUSTES ESPECÍFICOS PARA MOBILE (max-width: 1132px) */
-    @media (max-width: 777px) {
-        #hero {
-            background-image: none !important;
-            /* Remove fundo do hero */
+        @media (min-width: 1308px) {
+            .container-hero {
+                max-width: 890px;
+            }
         }
     }
 }
