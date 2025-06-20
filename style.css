@@ -25,10 +25,12 @@
         overflow-x: hidden;
         height: 100vh;
         width: 100vw;
+        scroll-behavior: smooth;
     }
 }
 
 @layer navegation {
+    /* ESTILOS BASE (MOBILE-FIRST) */
 
     nav {
         display: flex;
@@ -207,7 +209,7 @@
 
 @layer components {
 
-    /* ESTILOS BASE (MOBILE-FIRST) */
+
     #hero {
         background-image: url(images/1750271411483_1nnnm2_2_0.jpg);
         background-size: cover;
@@ -219,23 +221,9 @@
         flex-direction: column;
         align-items: flex-start;
         font-family: 'Open Sans', sans-serif;
-        /* text-align: justify; */
-        /* color: #fff; */
-        /* width: 100%;
-        height: auto; */
-        /* padding: 0 16px; */
-        /* background-color: #ffffff; */
 
     }
 
-    /* .img-hero-mobile {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-        padding: 0;
-        margin-top: 20px;
-    } */
 
     .container-hero {
         display: flex;
@@ -262,7 +250,7 @@
             line-height: 24px;
         }
 
-        button {
+        a {
             padding: 10px 15px;
             border-radius: 20px;
             border: none;
@@ -311,7 +299,7 @@
                 font-size: 17.5px;
             }
 
-            button {
+            a {
                 margin-top: 45px;
 
                 &:hover {
@@ -328,168 +316,85 @@
             }
         }
     }
-}
 
 
-/* 
-@layer components {
 
-    .img-hero-mobile {
-        width: 450px;
-        height: auto;
-        object-fit: cover;
-        position: absolute;
-        padding: 0 32px;
-    }
-
-    .container-hero {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        gap: 20px;
-        padding: 200px 32px;
+    #curiosidades {
+        padding: 30px 16px;
         font-family: 'Open Sans', sans-serif;
-        color: #fff;
-        width: 460px;
 
-        h1 {
-            font-size: 23px;
-            font-weight: 700;
-            line-height: 40px;
-            margin-bottom: 20px;
+        .title-sessao2 {
+            font-size: 1.2rem;
+            border-bottom: 0.2px solid #2e3505;
+            color: #2e3505;
         }
 
-        p {
-            font-size: 15px;
-            font-weight: 600;
-            line-height: 24px;
+        .p-sessao2 {
+            margin-top: 25px;
+            font-size: 1rem;
+            padding: 10px;
         }
 
-        button {
-            padding: 13px 20px;
-            border-radius: 20px;
-            border: none;
-            background-color: #2e3505;
-            color: #ffffff;
-            font-family: 'Raleway', sans-serif;
-            border: 0.4px solid #285503;
-            font-weight: 800;
-            margin-top: 20px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
+        article {
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(8, 77, 26, 0.3);
+
+
+            h3 {
+                font-size: 1.1rem;
+                color: #2e3505;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
         }
-    }
 
-    @media (max-width: 1132px) {
-        #hero {
-            background-image: url(images/passaro3mobile.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            width: 100%;
+        article {
+            display: none;
+        }
+
+        article.active {
+            /* Este é o seletor CORRETO */
+            display: flex;
+            /* O artigo ativo vai ter display: flex */
+            flex-direction: column;
+        }
 
 
-            .container-hero {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-end;
-                gap: 20px;
-                /* padding: 200px 60px; */
-/* font-family: 'Open Sans', sans-serif;
-                color: #fff;
-                width: 600px;
 
-                h1 {
-                    font-size: 35px;
-                    font-weight: 700;
-                    line-height: 40px;
-                    margin-bottom: 40px;
-                }
+        .botoes-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            /* Um pouco mais de espaço acima dos botões */
 
-                p {
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 24px;
-                }
 
-                button {
-                    padding: 13px 20px;
-                    border-radius: 20px;
-                    border: none;
-                    background-color: #2e3505;
-                    color: #ffffff;
-                    font-family: 'Raleway', sans-serif;
-                    border: 0.4px solid #285503;
-                    font-weight: 800;
-                    margin-top: 40px;
-                    cursor: pointer;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-                }
+            button {
+                background-color: #2e3505;
+                color: white;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 8px;
+                font-size: 1rem;
+                transition: background-color 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             }
         }
     }
 
-
-    @media (min-width: 1133px) {
-        #hero {
-            background-image: url(images/passaro3.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            width: 100%;
-
-
-            .container-hero {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-end;
-                gap: 20px;
-                padding: 200px 60px;
-                font-family: 'Open Sans', sans-serif;
-                color: #fff;
-                width: 600px;
-
-                h1 {
-                    font-size: 35px;
-                    font-weight: 700;
-                    line-height: 40px;
-                    margin-bottom: 40px;
-                }
-
-                p {
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 24px;
-                }
-
-                button {
-                    padding: 13px 20px;
-                    border-radius: 20px;
-                    border: none;
-                    background-color: #2e3505;
-                    color: #ffffff;
-                    font-family: 'Raleway', sans-serif;
-                    border: 0.4px solid #285503;
-                    font-weight: 800;
-                    margin-top: 40px;
-                    cursor: pointer;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-
-                    &:hover {
-                        background-color: #7b9d1d;
-                        transform: scale(1.05) translateY(-3px);
-                        box-shadow: 0 5px 15px rgba(42, 157, 143, 0.4);
-                    }
-                }
-            }
-
-        }
-    } */
-
-/*} */
+}
