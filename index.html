@@ -30,8 +30,8 @@
           <ul class="menu-main">
             <li><a href="#curiosidades">Curiosidades</a></li>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">Contato</a></li>
             <li><a href="#contribuir">Contribuir</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
 
           <a class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">
@@ -301,7 +301,10 @@
           <article>
             <h3>Asa Viva: Nossa História, Nosso Compromisso</h3>
             <figure>
-              <img src="images/imagem-seção-sobre.jpg" alt="Mão esticada com comida para um passarinho">
+              <img
+                src="images/imagem-seção-sobre.jpg"
+                alt="Mão esticada com comida para um passarinho"
+              />
             </figure>
             <p>
               A Asa Viva nasceu de um <strong>amor profundo</strong> e uma
@@ -343,9 +346,87 @@
         </div>
       </section>
 
-      <section id="contato"></section>
+      <section id="contribuir">
+        <div class="container-contribuir">
+          <h2>Como Você Pode Ajudar a Asa Viva?</h2>
+          <p class="intro-contribuir">
+            Sua paixão pelas aves pode transformar vidas. Cada gesto de apoio é
+            fundamental para mantermos nossos projetos e garantirmos um futuro
+            mais seguro para a fauna alada. Escolha a forma que melhor se alinha
+            com você e junte-se à nossa causa:
+          </p>
 
-      <section id="contribuir"></section>
+          <div class="opcoes-contribuicao">
+            <h4 class="subtitulo-opcoes">
+              Escolha como quer fazer a diferença:
+            </h4>
+            <form action="#contato" method="get" class="form-contribuicao">
+              <div class="lista-opcoes">
+                <label class="opcao-item">
+                  <input type="radio" name="contribuir_tipo" value="equipe" />
+                  <p class="icone-texto"
+                    ><i class="fas fa-users"></i> Juntar-me à equipe de
+                    trabalho</p
+                  >
+                </label>
+                <label class="opcao-item">
+                  <input
+                    type="radio"
+                    name="contribuir_tipo"
+                    value="voluntariado"
+                  />
+                  <p class="icone-texto"
+                    ><i class="fas fa-hand-holding-heart"></i> Fazer trabalho
+                    voluntário</p
+                  >
+                </label>
+                <label class="opcao-item">
+                  <input
+                    type="radio"
+                    name="contribuir_tipo"
+                    value="doacao_dinheiro"
+                  />
+                  <p class="icone-texto"
+                    ><i class="fas fa-dollar-sign"></i> Fazer uma doação em
+                    dinheiro</p
+                  >
+                </label>
+                <label class="opcao-item">
+                  <input
+                    type="radio"
+                    name="contribuir_tipo"
+                    value="parceria_empresa"
+                  />
+                  <p class="icone-texto"
+                    ><i class="fas fa-handshake"></i> Estabelecer parceria
+                    empresarial</p
+                  >
+                </label>
+                <label class="opcao-item">
+                  <input
+                    type="radio"
+                    name="contribuir_tipo"
+                    value="doacao_materiais"
+                  />
+                  <p class="icone-texto"
+                    ><i class="fas fa-boxes"></i> Doar materiais ou
+                    equipamentos</p
+                  >
+                </label>
+              </div>
+              <button type="submit" class="botao-contribuir">
+                Quero Contribuir!
+              </button>
+              <p class="aviso-contato">
+                Ao clicar, você será direcionado à nossa seção de contato para
+                prosseguir com sua escolha.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato"></section>
     </main>
 
     <footer></footer>
