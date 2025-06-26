@@ -238,7 +238,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
-        padding: 265px 16px;
+        padding: 270px 16px;
         /* Padding reduzido no mobile */
         width: 100%;
         max-width: 550px;
@@ -246,14 +246,14 @@
         color: #ffffff;
 
         h1 {
-            font-size: 20px;
+            font-size: 1.5rem;
             font-weight: 700;
             line-height: 40px;
             /* margin-bottom: 10px; */
         }
 
         p {
-            font-size: 15px;
+            font-size: 0.90rem;
             font-weight: 600;
             line-height: 24px;
         }
@@ -309,6 +309,8 @@
 
             a {
                 margin-top: 45px;
+                font-size: 1rem;
+                padding: 15px;
 
                 &:hover {
                     background-color: #7b9d1d;
@@ -317,10 +319,24 @@
                 }
             }
         }
+    }
 
-        @media (min-width: 1308px) {
-            .container-hero {
-                max-width: 890px;
+    @media (min-width: 1308px) {
+        .container-hero {
+            max-width: 890px;
+
+            h1 {
+                font-size: 2.6rem;
+            }
+
+            p {
+                font-size: 1.05rem;
+
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 16px;
             }
         }
     }
@@ -1032,16 +1048,30 @@
         padding: 30px 16px;
         overflow: hidden;
         max-width: 100%;
-        background-color: #2e3505;
+        background-color: #3e4c2c;
         color: rgb(244, 239, 239);
 
-
-        h2 {
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 10px 0;
+        .container-titulo-contato {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 0.2px solid rgb(244, 239, 239);
+            height: 70px;
+
+            h2 {
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 10px 0;
+
+            }
+
+            .logo {
+                width: 45px;
+                height: 45px;
+            }
+
         }
+
 
         .conteudo-contact {
             display: flex;
@@ -1300,9 +1330,18 @@
         @media (min-width: 768px) {
             padding: 80px 44px;
 
-            h2 {
-                font-size: 2rem;
+            .container-titulo-contato {
+                h2 {
+                    font-size: 2rem;
+                }
+
+                .logo {
+                    width: 60px;
+                    height: 60px;
+                }
             }
+
+
 
             .conteudo-contact {
                 .contact-info-boxes {
@@ -1341,6 +1380,15 @@
 
 
             @media (min-width: 865px) {
+
+                .container-titulo-contato {
+                    .logo {
+                        width: 65px;
+                        height: 65px;
+                    }
+                }
+
+
                 .conteudo-contact {
                     display: flex;
                     flex-direction: row;
@@ -1356,9 +1404,17 @@
             @media (min-width: 1200px) {
                 padding: 80px 44px;
 
-                h2 {
-                    font-size: 2.5rem;
+                .container-titulo-contato {
+                    max-width: 1440px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    h2 {
+                        font-size: 2.5rem;
+                    }
                 }
+
+
 
                 .conteudo-contact {
                     max-width: 1100px;
@@ -1379,5 +1435,154 @@
 
 
 
+    #main-footer {
+        background-color: #3e4c2c;
+        /* Cor de fundo escura da sua paleta */
+        color: #f7fcf0;
+        /* Texto claro */
+        padding: 30px 16px;
+        /* Padding superior, lateral, inferior */
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        border-top: 2.5px solid rgba(247, 252, 240, 0.2);
+        /* Centraliza o texto por padrão (mobile) */
+
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            /* Empilha as seções no mobile */
+            gap: 30px;
+            /* Espaço entre as seções do footer */
+            max-width: 1100px;
+            /* Largura máxima do conteúdo do footer */
+            margin: 0 auto;
+            /* Centraliza o container principal do footer */
+            align-items: center;
+            /* Centraliza os itens em coluna */
+        }
+
+        .footer-brand {
+            h3 {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+                color: #c3d73c;
+                /* Cor de destaque da sua paleta */
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                max-width: 300px;
+                /* Limita a largura do parágrafo */
+                margin: 0 auto;
+                /* Centraliza o parágrafo no mobile */
+            }
+        }
+
+        .footer-social {
+            h4 {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+                color: #f7fcf0;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 15px;
+                /* Espaço entre os ícones */
+                justify-content: center;
+                /* Centraliza os ícones */
+
+                a {
+                    color: #f7fcf0;
+                    /* Cor dos ícones */
+                    font-size: 1.5rem;
+                    width: 40px;
+                    height: 40px;
+                    border: 2px solid #f7fcf0;
+                    border-radius: 50%;
+                    /* Ícones circulares */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #a2b52c;
+                        /* Cor de destaque no hover */
+                        color: #2e3505;
+                        /* Cor do ícone no hover */
+                        border-color: #a2b52c;
+                    }
+                }
+            }
+        }
+
+        .footer-contact-info {
+            h4 {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+                color: #f7fcf0;
+            }
+
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* Centraliza o texto de contato no mobile */
+                gap: 8px;
+                /* Espaço entre ícone e texto */
+                color: #f7fcf0;
+
+                .fas {
+                    color: #a2b52c;
+                    /* Cor dos ícones de contato */
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(247, 252, 240, 0.2);
+            /* Linha divisória sutil */
+            padding-top: 20px;
+            margin-top: 40px;
+            /* Espaço do conteúdo acima */
+            font-size: 0.8rem;
+            color: rgba(247, 252, 240, 0.7);
+            /* Cor mais suave para o copyright */
+        }
+
+        /* Media Query para Desktop */
+        @media (min-width: 768px) {
+            padding: 80px 44px;
+
+            .footer-container {
+                flex-direction: row;
+                /* Coloca as seções lado a lado no desktop */
+                justify-content: space-around;
+                /* Distribui o espaço entre elas */
+                /* align-items: flex-start; */
+                /* Alinha as seções ao topo */
+                /* text-align: left; */
+                /* Alinha o texto à esquerda dentro de cada seção */
+                gap: 50px;
+                /* Mais espaço entre as colunas */
+            }
+
+            .footer-brand,
+            .footer-social,
+            .footer-contact-info {
+                flex: 1;
+                /* Distribui o espaço igualmente */
+                max-width: 30%;
+                /* Limita a largura para não ficarem muito grandes */
+            }
+        }
+
+    }
 
 }
