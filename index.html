@@ -347,15 +347,14 @@
       </section>
 
       <section id="contribuir">
+        <h2>Como Você Pode Ajudar a Asa Viva?</h2>
+        <p class="intro-contribuir">
+          <strong>Sua paixão pelas aves pode transformar vidas.</strong> Cada
+          gesto de apoio é fundamental para mantermos nossos projetos e
+          garantirmos um futuro mais seguro para a fauna alada. Escolha a forma
+          que melhor se alinha com você e junte-se à nossa causa:
+        </p>
         <div class="container-contribuir">
-          <h2>Como Você Pode Ajudar a Asa Viva?</h2>
-          <p class="intro-contribuir">
-            Sua paixão pelas aves pode transformar vidas. Cada gesto de apoio é
-            fundamental para mantermos nossos projetos e garantirmos um futuro
-            mais seguro para a fauna alada. Escolha a forma que melhor se alinha
-            com você e junte-se à nossa causa:
-          </p>
-
           <div class="opcoes-contribuicao">
             <h4 class="subtitulo-opcoes">
               Escolha como quer fazer a diferença:
@@ -364,10 +363,9 @@
               <div class="lista-opcoes">
                 <label class="opcao-item">
                   <input type="radio" name="contribuir_tipo" value="equipe" />
-                  <p class="icone-texto"
-                    ><i class="fas fa-users"></i> Juntar-me à equipe de
-                    trabalho</p
-                  >
+                  <p class="icone-texto">
+                    <i class="fas fa-users"></i> Juntar-me à equipe de trabalho
+                  </p>
                 </label>
                 <label class="opcao-item">
                   <input
@@ -375,10 +373,10 @@
                     name="contribuir_tipo"
                     value="voluntariado"
                   />
-                  <p class="icone-texto"
-                    ><i class="fas fa-hand-holding-heart"></i> Fazer trabalho
-                    voluntário</p
-                  >
+                  <p class="icone-texto">
+                    <i class="fas fa-hand-holding-heart"></i> Fazer trabalho
+                    voluntário
+                  </p>
                 </label>
                 <label class="opcao-item">
                   <input
@@ -386,10 +384,10 @@
                     name="contribuir_tipo"
                     value="doacao_dinheiro"
                   />
-                  <p class="icone-texto"
-                    ><i class="fas fa-dollar-sign"></i> Fazer uma doação em
-                    dinheiro</p
-                  >
+                  <p class="icone-texto">
+                    <i class="fas fa-dollar-sign"></i> Fazer uma doação em
+                    dinheiro
+                  </p>
                 </label>
                 <label class="opcao-item">
                   <input
@@ -397,10 +395,10 @@
                     name="contribuir_tipo"
                     value="parceria_empresa"
                   />
-                  <p class="icone-texto"
-                    ><i class="fas fa-handshake"></i> Estabelecer parceria
-                    empresarial</p
-                  >
+                  <p class="icone-texto">
+                    <i class="fas fa-handshake"></i> Estabelecer parceria
+                    empresarial
+                  </p>
                 </label>
                 <label class="opcao-item">
                   <input
@@ -408,10 +406,9 @@
                     name="contribuir_tipo"
                     value="doacao_materiais"
                   />
-                  <p class="icone-texto"
-                    ><i class="fas fa-boxes"></i> Doar materiais ou
-                    equipamentos</p
-                  >
+                  <p class="icone-texto">
+                    <i class="fas fa-boxes"></i> Doar materiais ou equipamentos
+                  </p>
                 </label>
               </div>
               <button type="submit" class="botao-contribuir">
@@ -426,7 +423,88 @@
         </div>
       </section>
 
-      <section id="contato"></section>
+      <section id="contato">
+        <h2>
+          Conecte-se Conosco!
+          <i class="fas fa-envelope-open" aria-hidden="true"></i>
+        </h2>
+
+        <div class="conteudo-contact">
+          <form name="formulario" onsubmit="return validarFormulario()">
+            <fieldset>
+              <label class="nome" for="name">Nome Completo</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nome Completo"
+                required
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@company.com"
+                required
+              />
+
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <div class="container-checkbox">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <label for="privacy"
+                  >Você concorda com nossa
+                  <a href="#">política de privacidade</a></label
+                >
+              </div>
+
+              <button class="button-submit" type="submit">Enviar</button>
+            </fieldset>
+          </form>
+
+          <div class="contact-info-boxes">
+            <address class="contact-box">
+              <i class="fas fa-envelope svg-contact" aria-hidden="true"></i>
+              <h3>Email</h3>
+              <p>Nosso time está aqui para ajudar.</p>
+              <p class="addresses">
+                <a href="#">ong@asaviva.com</a>
+              </p>
+            </address>
+
+            <address class="contact-box">
+              <i class="fas fa-comments svg-contact" aria-hidden="true"></i>
+              <h3>Chat</h3>
+              <p>Nosso time está aqui para ajudar.</p>
+              <p class="addresses">
+                <a href="#">Iniciar novo chat</a>
+              </p>
+            </address>
+
+            <address class="contact-box">
+              <i
+                class="fas fa-map-marker-alt svg-contact"
+                aria-hidden="true"
+              ></i>
+              <h3>Office</h3>
+              <p>Venha nos dar um alô!</p>
+              <p class="addresses">Rua Aves, 812, SP</p>
+            </address>
+
+            <address class="contact-box">
+              <i class="fas fa-phone-alt svg-contact" aria-hidden="true"></i>
+              <h3>Phone</h3>
+              <p>Seg-sab das 7h às 18h.</p>
+              <p class="addresses">
+                <a href="#">+55 12 92928383</a>
+              </p>
+            </address>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
