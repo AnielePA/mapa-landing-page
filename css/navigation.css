@@ -57,6 +57,7 @@
         padding: 0;
         overflow: hidden;
         transition: all 0.5s;
+        z-index: 10;
 
         ul {
             list-style-type: none;
