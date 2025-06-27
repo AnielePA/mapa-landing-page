@@ -81,7 +81,7 @@
         </div>
       </section>
 
-      <section id="curiosidades"  class="animated-main-item">
+      <section id="curiosidades" class="animated-main-item">
         <h2 class="title-curiosidades">Ave da Semana: Coruja! 🦉</h2>
         <p class="p-apresentacao">
           Você já se perguntou o que torna as <strong>corujas</strong> tão
@@ -322,9 +322,9 @@
         </div>
       </section>
 
-      <section id="sobre"  class="animated-main-item">
+      <section id="sobre" class="animated-main-item">
         <h2>Sobre Nós <i class="fas fa-feather-alt" aria-hidden="true"></i></h2>
-        <div class="container-sobre  animated-main-item" >
+        <div class="container-sobre animated-main-item">
           <article>
             <h3>Asa Viva: Nossa História, Nosso Compromisso</h3>
             <figure>
@@ -373,9 +373,9 @@
         </div>
       </section>
 
-      <section id="contribuir"  class="animated-main-item">
+      <section id="contribuir" class="animated-main-item">
         <h2>Como Você Pode Ajudar a Asa Viva?</h2>
-        <p class="intro-contribuir  animated-main-item"  >
+        <p class="intro-contribuir animated-main-item">
           <strong>Sua paixão pelas aves pode transformar vidas.</strong> Cada
           gesto de apoio é fundamental para mantermos nossos projetos e
           garantirmos um futuro mais seguro para a fauna alada. Escolha a forma
@@ -386,7 +386,7 @@
             <h4 class="subtitulo-opcoes">
               Escolha como quer fazer a diferença:
             </h4>
-            <form action="#contato" method="get" class="form-contribuicao">
+            <form action="#contato" class="form-contribuicao">
               <div class="lista-opcoes">
                 <label class="opcao-item">
                   <input
@@ -461,7 +461,7 @@
 
       <section id="contato">
         <canvas id="particle-canvas"></canvas>
-        <div class="container-titulo-contato  animated-main-item"  >
+        <div class="container-titulo-contato animated-main-item">
           <img
             src="images/origami-verde-removebg-preview.png"
             alt="logo da Asa Viva: um passáro de origami verde"
@@ -470,7 +470,7 @@
           <h2>Conecte-se com a Asa Viva!</h2>
         </div>
 
-        <div class="conteudo-contact  animated-main-item">
+        <div class="conteudo-contact animated-main-item">
           <form name="formulario" onsubmit="return validarFormulario()">
             <fieldset>
               <label class="nome" for="name">Nome Completo</label>
@@ -481,6 +481,7 @@
                 placeholder="Nome Completo"
                 required
               />
+              <span id="erro-nome" class="erro"></span>
 
               <label for="email">Email</label>
               <input
@@ -490,9 +491,11 @@
                 placeholder="you@company.com"
                 required
               />
+              <span id="erro-email" class="erro"></span>
 
               <label for="message">Mensagem</label>
               <textarea id="message" name="message" required></textarea>
+              <span id="erro-mensagem" class="erro"></span>
 
               <div class="container-checkbox">
                 <input type="checkbox" id="privacy" name="privacy" required />
@@ -500,6 +503,7 @@
                   >Você concorda com nossa
                   <a href="#">política de privacidade</a></label
                 >
+                <span id="erro-privacidade" class="erro"></span>
               </div>
 
               <button class="button-submit" type="submit">Enviar</button>

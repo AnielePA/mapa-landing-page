@@ -172,6 +172,14 @@
                     min-height: 120px;
                 }
 
+
+                span.erro {
+                    color: red;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-top: 4px;
+                }
+
                 .container-checkbox {
                     display: flex;
                     gap: 5px;

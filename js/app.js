@@ -71,27 +71,60 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//Animações:
-document.addEventListener('DOMContentLoaded', function () {
-
-    const containerHero = document.querySelector('.container-hero');
-
-    const mainNav = document.querySelector('nav');
 
 
+//validações do forumlário de contato
 
-    setTimeout(() => {
-        //para o container-hero
-        if (containerHero) {
-            containerHero.classList.add('active');
-        }
+function validarFormulario() {
+    let nome = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let mensagem = document.getElementById('message').value;
+    let privacidade = document.getElementById('privacy').checked;
 
-        //para a barra de navegação
-        if (mainNav) {
-            mainNav.classList.add('active');
-        }
-    }, 50);
-});
+    let erroNome = document.getElementById('erro-nome');
+    let erroEmail = document.getElementById('erro-email');
+    let erroMensagem = document.getElementById('erro-mensagem');
+    let erroPrivacidade = document.getElementById('erro-privacidade');
+
+    //para limpar mensagens de erros anteriores
+    erroNome.textContent = '';
+    erroEmail.textContent = '';
+    erroMensagem.textContent = '';
+    erroPrivacidade.textContent = '';
+
+    let formValido = true;
+
+
+    //validando nome para que tenha 2 palavras com no mínimo 2 letras cada, e sem caracteres diferentes
+    const nomeValido = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)+$/;
+    if (nome.length < 4 || !nomeValido.test(nome)) {
+        erroNome.textContent = 'Por favor, insira seu nome completo (mínimo de 4 caracteres e duas palavras).';
+        formValido = false;
+    }
+
+    //validando formato de email
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValido.test(email)) {
+        erroEmail.textContent = 'Por favor, insira um endereço de e-mail válido (ex: seuemail@dominio.com).';
+        formValido = false;
+    }
+
+    //validando mensagem para que tenha o tamanho mínimo de 10 caracteres
+    if (mensagem.length < 10) {
+        erroMensagem.textContent = 'A mensagem deve ter no mínimo 10 caracteres.';
+        formValido = false;
+    }
+
+    //se o formulário não estiver de acordo com essas regras, não é enviado
+    if (!formValido) {
+        return false;
+    }
+
+    //se estiver ok, permite o envio do formulário
+    alert('Formulário enviado com sucesso!');
+    return true;
+}
+
 
 
 
