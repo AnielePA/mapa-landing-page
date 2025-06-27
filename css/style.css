@@ -1,0 +1,15 @@
+@layer reset, base, navegation, components;
+
+
+@import url('reset.css') layer(reset);
+@import url('base.css') layer(base);
+
+@import url('navigation.css') layer(navigation);
+
+@import url('sections/hero.css') layer(components);
+@import url('sections/curiosities.css') layer(components);
+@import url('sections/sobre.css') layer(components);
+@import url('sections/contribuir.css') layer(components);
+@import url('sections/contato.css') layer(components);
+@import url('sections/footer.css') layer(components);
+

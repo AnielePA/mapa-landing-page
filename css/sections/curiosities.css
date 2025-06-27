@@ -1,0 +1,240 @@
+@layer components {
+
+    /*mobile-first*/
+    #curiosidades {
+        padding: 30px 16px;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: var(--background-body);
+
+
+        .title-curiosidades {
+            font-size: 1.5rem;
+            text-align: center;
+            color: var(--color-green-dark);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: var(--border-green-light);
+        }
+
+        .p-apresentacao {
+            margin: 25px 0;
+            font-size: 1rem;
+            padding: 15px;
+            background-color: var(--background-intros);
+            border-radius: 10px;
+            box-shadow: var(--box-shadow-intros);
+            line-height: 1.7;
+
+            strong {
+                color: var(--color-text-strong);
+                font-weight: 800;
+            }
+        }
+
+        .container {
+            background-color: var(--color-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow-containers);
+            margin-top: 20px;
+
+            .container-curiosidades {
+                article.curiosity-item {
+                    display: none;
+                    flex-direction: column;
+                    gap: 25px;
+                    padding: 20px;
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    .test-content {
+                        h3 {
+                            font-size: 1.3rem;
+                            color: var(--color-green-dark);
+                            margin-bottom: 12px;
+                            padding-bottom: 8px;
+                            border-bottom: var(--border-green-dashed);
+                        }
+
+                        p {
+                            font-size: 0.95rem;
+                            font-weight: 500;
+                            color: var(--color-black);
+                            line-height: 1.7;
+                        }
+                    }
+
+                    figure {
+                        border-radius: 12px;
+                        overflow: hidden;
+                        box-shadow: var(--box-shadow-figures);
+                        margin-top: 5px;
+
+                        img {
+                            width: 100%;
+                            display: block;
+                            transition: transform 0.3s ease;
+
+                            &:hover {
+                                transform: scale(1.03);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .botoes-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+                background-color: var(--background-container-btn);
+                border-top: var(--border-light);
+
+                button {
+                    background-color: var(--color-green-dark);
+                    color: var(--color-white);
+                    border: none;
+                    padding: 12px 30px;
+                    border-radius: 8px;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    box-shadow: var(--box-shadow-btn-container);
+                    cursor: pointer;
+                    flex: 1;
+                    max-width: 150px;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: var(--background-hover-container-btn);
+                        transform: translateY(-2px);
+                        box-shadow: var(--box-shadow-hover-container-btn);
+                    }
+
+                    &:active {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+
+
+        @media (min-width: 778px) {
+            padding: 40px 44px;
+
+            .title-curiosidades {
+                font-size: 2rem;
+            }
+
+            .container .botoes-container button {
+                padding: 14px 35px;
+                font-size: 1.1rem;
+                max-width: 180px;
+            }
+        }
+
+        @media (min-width: 865px) {
+
+
+            .container {
+                margin: 30px auto 0;
+                padding: 20px;
+
+                .container-curiosidades {
+                    article.curiosity-item {
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 30px;
+
+                        .test-content {
+                            flex: 1;
+                            padding-right: 30px;
+                        }
+
+                        figure {
+                            flex: 1;
+                            max-width: 45%;
+                        }
+                    }
+                }
+            }
+
+            .p-apresentacao {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+
+            .container .container-curiosidades article.curiosity-item .test-content {
+                h3 {
+                    font-size: 1.7rem;
+                }
+
+                p {
+                    font-size: 1.15rem;
+                    line-height: 1.8;
+                }
+            }
+        }
+
+
+        @media (min-width: 1200px) {
+            padding: 90px 44px;
+
+
+
+            .title-curiosidades {
+                font-size: 2.5rem;
+                max-width: 1400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .p-apresentacao {
+                font-size: 1.15rem;
+                max-width: 1100px;
+                margin: 30px auto;
+                padding: 25px;
+            }
+
+
+
+            .container {
+                max-width: 1100px;
+                padding: 30px;
+
+                .container-curiosidades {
+                    article.curiosity-item {
+                        .test-content {
+                            flex: 1.2;
+                        }
+
+                        figure {
+                            flex: 0.8;
+                            max-width: 40%;
+                        }
+                    }
+                }
+
+            }
+
+            .container .botoes-container button {
+                padding: 15px 40px;
+                font-size: 1.15rem;
+                max-width: 200px;
+            }
+
+        }
+
+
+        @media (min-width: 1600px) {
+            .container {
+                max-width: 1100px;
+            }
+        }
+    }
+}

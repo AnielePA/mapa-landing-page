@@ -1,0 +1,265 @@
+@layer components {
+    /*mobile-first*/
+    #contribuir {
+        padding: 30px 16px;
+        text-align: center;
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--color-green-dark);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            max-width: 1440px;
+            border-bottom: var(--border-green-light);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-contribuir {
+            font-size: 1.05rem;
+            color: var(--color-black);
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            background-color: var(--background-intros);
+            border-radius: 10px;
+            box-shadow: var(--box-shadow-intros);
+            line-height: 1.7;
+            padding: 15px;
+
+            strong {
+                color: var(--color-text-strong);
+                font-weight: 800;
+            }
+
+        }
+
+        .opcoes-contribuicao {
+            background-color: var(--color-white);
+            border-radius: 15px;
+            box-shadow: var(--box-shadow-contribuir-e-form);
+            padding: 30px;
+            margin: 0 auto;
+            text-align: left;
+            border: var(--border-light2);
+
+
+            h4 {
+                font-size: 1.3rem;
+                color: var(--color-green-dark);
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+                border-bottom: var(--border-green-dashed);
+                text-align: center;
+            }
+
+            .lista-opcoes {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                margin-bottom: 30px;
+
+                .opcao-item {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                    color: var(--color-medium-dark);
+                    transition: color 0.2s ease, transform 0.2s ease;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    border: var(--border-light);
+                    background-color: var(--color-white2);
+
+                    &:hover {
+                        color: var(--color-green-dark);
+                        transform: translateX(5px);
+                        background-color: var(--color-white3);
+                        border-color: var(--color-green-light2);
+                    }
+
+                    input[type="radio"] {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        width: 20px;
+                        height: 20px;
+                        border: var(--border-green-light);
+                        border-radius: 50%;
+                        margin-right: 12px;
+                        position: relative;
+                        outline: none;
+                        cursor: pointer;
+                        flex-shrink: 0;
+
+
+                        &:checked {
+                            background-color: var(--color-green-light2);
+                            border-color: var(--color-green-dark);
+
+                            &::before {
+                                content: '';
+                                display: block;
+                                width: 10px;
+                                height: 10px;
+                                background-color: var(--color-white);
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                    }
+
+                    .icone-texto {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+
+                        .fas {
+                            font-size: 1.3rem;
+                            color: var(--color-green-light3);
+                        }
+                    }
+                }
+            }
+
+            .form-contribuicao {
+                .botao-contribuir {
+                    background-color: var(--color-green-dark);
+                    color: var(--color-white);
+                    border: none;
+                    padding: 15px 35px;
+                    border-radius: 8px;
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, transform 0.2s ease;
+                    box-shadow: var(--box-shadow-btn-contato-e-contribuir);
+                    display: block;
+                    width: fit-content;
+                    margin: 0 auto;
+
+                    &:hover {
+                        background-color: var(--color-green-medium2);
+                        transform: translateY(-2px);
+                    }
+                }
+
+                .aviso-contato {
+                    font-size: 0.85rem;
+                    color: var(--color-gray);
+                    margin-top: 20px;
+                    text-align: center;
+                }
+            }
+        }
+
+
+        @media (min-width: 768px) {
+            padding: 80px 44px;
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 35px;
+
+
+                &::after {
+                    width: 150px;
+                }
+            }
+
+            .intro-contribuir {
+                font-size: 1.15rem;
+                margin-bottom: 50px;
+                padding: 30px;
+            }
+
+            .opcoes-contribuicao {
+                padding: 40px;
+
+                h4 {
+                    font-size: 1.7rem;
+                }
+
+                .lista-opcoes {
+                    gap: 22px;
+
+                    .opcao-item {
+                        font-size: 1.2rem;
+                        padding: 12px 20px;
+
+                        input[type="radio"] {
+                            width: 22px;
+                            height: 22px;
+                        }
+
+                        .icone-texto .fas {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                .form-contribuicao {
+                    .botao-contribuir {
+                        padding: 18px 45px;
+                        font-size: 1.25rem;
+                    }
+
+                    .aviso-contato {
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+
+            .opcoes-contribuicao {
+                border-radius: 15px;
+                box-shadow: var(--box-shadow-containers);
+                padding: 30px 0;
+                margin: 0 auto;
+                max-width: 1100px;
+                background-color: var(--color-white);
+
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .intro-contribuir {
+                font-size: 1.2rem;
+                max-width: 1100px;
+
+            }
+
+            .opcoes-contribuicao {
+
+                padding: 50px;
+
+                h4 {
+                    font-size: 1.8rem;
+                }
+
+                .lista-opcoes {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 25px;
+
+                    .opcao-item {
+                        flex: 1 1 45%;
+                        max-width: 350px;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

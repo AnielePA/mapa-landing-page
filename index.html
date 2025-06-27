@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>ONG-Asa-Viva</title>
   </head>
   <body>
@@ -110,7 +110,7 @@
               <figure>
                 <img
                   src="images/curiosidade1.jpg"
-                  alt="Duas coruja-buraqueira"
+                  alt="Duas coruja-buraqueira olhando para frente, com seus olhos amarelos e em meio a folhagem"
                 />
               </figure>
             </article>
@@ -130,7 +130,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade2.jpg" alt="" />
+                <img
+                  src="images/curiosidade2.jpg"
+                  alt="Coruja-das-torres com plumagem branca e marrom, olhando para baixo, contra um céu azul."
+                />
               </figure>
             </article>
 
@@ -148,7 +151,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade3.jpg" alt="" />
+                <img
+                  src="images/curiosidade3.jpg"
+                  alt="Coruja jovem empoleirada em um galho, com olhos alaranjados e rodeada por folhagem verde."
+                />
               </figure>
             </article>
 
@@ -168,7 +174,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade4.jpg" alt="" />
+                <img
+                  src="images/curiosidade4.jpg"
+                  alt="Coruja-das-neves branca com manchas escuras e olhos amarelos, espreitando por trás de um tronco de árvore."
+                />
               </figure>
             </article>
 
@@ -187,7 +196,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade5.jpg" alt="" />
+                <img
+                  src="images/curiosidade5.jpg"
+                  alt="Coruja-orelhuda com olhos alaranjados vibrantes, olhando diretamente para a frente, com um fundo escuro e embaçado."
+                />
               </figure>
             </article>
 
@@ -205,7 +217,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade6.jpg" alt="" />
+                <img
+                  src="images/curiosidade6.jpg"
+                  alt="Coruja de plumagem cinza e branca, com olhos amarelos, empoleirada em uma rocha, olhando para a frente. O fundo é escuro e desfocado com alguns pontos de luz."
+                />
               </figure>
             </article>
 
@@ -225,7 +240,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade7.jpg" alt="" />
+                <img
+                  src="images/curiosidade7.jpg"
+                  alt="Duas corujas-das-neves brancas com manchas escuras. Uma está em primeiro plano, com os olhos quase fechados, e a outra está logo atrás, com os olhos amarelados abertos, em um fundo escuro e embaçado."
+                />
               </figure>
             </article>
 
@@ -244,7 +262,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade8.jpg" alt="" />
+                <img
+                  src="images/curiosidade8.jpg"
+                  alt="Coruja pequena de penas marrons e brancas, com olhos amarelos e pupilas escuras, observando o espectador de um galho de pinheiro."
+                />
               </figure>
             </article>
 
@@ -263,7 +284,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade9.jpg" alt="" />
+                <img
+                  src="images/curiosidade9.jpg"
+                  alt="Coruja-Gavião com penas brancas e marrons escuras, empoleirada em um galho vertical, olhando para o lado esquerdo com seus olhos amarelos. O fundo é claro e desfocado."
+                />
               </figure>
             </article>
 
@@ -283,7 +307,10 @@
                 </p>
               </div>
               <figure>
-                <img src="images/curiosidade10.jpg" alt="" />
+                <img
+                  src="images/curiosidade10.jpg"
+                  alt="Close-up de uma coruja com plumagem cinza, olhos grandes e alaranjados vibrantes e 'orelhas' proeminentes, olhando diretamente para a câmera."
+                />
               </figure>
             </article>
           </div>
@@ -362,7 +389,12 @@
             <form action="#contato" method="get" class="form-contribuicao">
               <div class="lista-opcoes">
                 <label class="opcao-item">
-                  <input type="radio" name="contribuir_tipo" value="equipe" />
+                  <input
+                    type="radio"
+                    name="contribuir_tipo"
+                    value="equipe"
+                    required
+                  />
                   <p class="icone-texto">
                     <i class="fas fa-users"></i> Juntar-me à equipe de trabalho
                   </p>
@@ -372,6 +404,7 @@
                     type="radio"
                     name="contribuir_tipo"
                     value="voluntariado"
+                    required
                   />
                   <p class="icone-texto">
                     <i class="fas fa-hand-holding-heart"></i> Fazer trabalho
@@ -383,6 +416,7 @@
                     type="radio"
                     name="contribuir_tipo"
                     value="doacao_dinheiro"
+                    required
                   />
                   <p class="icone-texto">
                     <i class="fas fa-dollar-sign"></i> Fazer uma doação em
@@ -394,6 +428,7 @@
                     type="radio"
                     name="contribuir_tipo"
                     value="parceria_empresa"
+                    required
                   />
                   <p class="icone-texto">
                     <i class="fas fa-handshake"></i> Estabelecer parceria
@@ -405,6 +440,7 @@
                     type="radio"
                     name="contribuir_tipo"
                     value="doacao_materiais"
+                    required
                   />
                   <p class="icone-texto">
                     <i class="fas fa-boxes"></i> Doar materiais ou equipamentos
@@ -511,7 +547,7 @@
       </section>
     </main>
 
-    <footer id="main-footer">
+    <footer>
       <div class="footer-container">
         <div class="footer-brand">
           <h3>Asa Viva</h3>
@@ -561,6 +597,6 @@
         </p>
       </div>
     </footer>
-    <script src="script.js" defer></script>
+    <script src="./js/app.js" defer></script>
   </body>
 </html>
