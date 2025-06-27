@@ -13,3 +13,21 @@
 @import url('sections/contato.css') layer(components);
 @import url('sections/footer.css') layer(components);
 
+
+/* Estilos para os elementos que vão animar dentro do main */
+.animated-main-item {
+    opacity: 0;
+    /* Começa invisível */
+    transform: translateY(30px);
+    /* Começa 30px abaixo da posição final */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    /* Animação suave de 0.8 segundos */
+}
+
+/* Estado final: quando a classe 'active' é adicionada */
+.animated-main-item.active {
+    opacity: 1;
+    /* Torna-se visível */
+    transform: translateY(0);
+    /* Volta para a posição original */
+}

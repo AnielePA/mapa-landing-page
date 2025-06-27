@@ -7,6 +7,7 @@
         position: absolute;
         align-items: center;
         background-color: transparent;
+        z-index: 10;
 
 
 
@@ -91,6 +92,15 @@
         nav {
             position: absolute;
             background-color: transparent;
+
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: transform 1s ease, opacity 1s ease;
+
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
 
             .container-nav {
                 padding: 0px 44px;
