@@ -132,6 +132,12 @@
                 a {
                     font-size: 1rem;
                     padding: 16px;
+
+                    &:hover {
+                        background-color: var(--background-hover-btn-hero);
+                        transform: scale(1.05) translateY(-3px);
+                        box-shadow: var(--box-shadow-btn-hero);
+                    }
                 }
             }
         }

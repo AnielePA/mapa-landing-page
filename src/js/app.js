@@ -1,11 +1,15 @@
 
+
+//---------Menu Dropdown---------
+
+
 //função para abrir o menu dropdown e fechar:
 
-let menuList = document.getElementById("menuList")
-menuList.style.maxHeight = "0px";
-
-
 function toggleMenu() {
+    let menuList = document.getElementById("menuList")
+    menuList.style.maxHeight = "0px";
+
+
     if (menuList.style.maxHeight == "0px") {
         menuList.style.maxHeight = "300px";
     } else {
@@ -149,10 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 50);
 
 
-
-
     //função para criar pontinhos de luz em movimento como background 
-    function criarParticulaDeAnimacao(containerId, canvasId) {
+    function criarPontinhosDeAnimacao(containerId, canvasId) {
         const containerElement = document.getElementById(containerId);
         const canvasElement = document.getElementById(canvasId);
 
@@ -166,51 +168,51 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //variáveis para guardar a largura e altura do canvas, e um array para guardar os pontinhos
         let width, height;
-        let particles = [];
+        let pontinhos = [];
 
         //para configurar os pontinhos
-        const numParticles = 60;
-        const particleColor = 'rgba(255, 255, 255, 0.24)';
-        const particleMinSize = 1.5;
-        const particleMaxSize = 4;
-        const particleSpeed = 0.2;
+        const numPontinhos = 60;
+        const pontinhosColor = 'rgba(255, 255, 255, 0.24)';
+        const pontinhosMinSize = 1.5;
+        const pontinhosMaxSize = 4;
+        const pontinhosSpeed = 0.2;
 
         //função para ajustar o tamanho do canvas de acordo com seu elemento pai
-        function resizeCanvas() {
+        function ajustarCanvas() {
             width = containerElement.offsetWidth;
             height = containerElement.offsetHeight;
             canvasElement.width = width;
             canvasElement.height = height;
-            initializeParticles();
+            inicializarPontinhos();
         }
 
         //função pra criar apenas um pontinho em posição aleatória
-        function createParticle() {
+        function criarPontinhos() {
             return {
                 x: Math.random() * width,
                 y: Math.random() * height,
-                radius: Math.random() * (particleMaxSize - particleMinSize) + particleMinSize,
-                vx: (Math.random() - 0.5) * particleSpeed,
-                vy: (Math.random() - 0.5) * particleSpeed
+                radius: Math.random() * (pontinhosMaxSize - pontinhosMinSize) + pontinhosMinSize,
+                vx: (Math.random() - 0.5) * pontinhosSpeed,
+                vy: (Math.random() - 0.5) * pontinhosSpeed
             };
         }
 
         //função para criar os primeiros pontinhos e apagar os antigos
-        function initializeParticles() {
-            particles = [];
-            for (let i = 0; i < numParticles; i++) {
-                particles.push(createParticle());
+        function inicializarPontinhos() {
+            pontinhos = [];
+            for (let i = 0; i < numPontinhos; i++) {
+                pontinhos.push(criarPontinhos());
             }
         }
 
         //função que vai desenhar os pontinhos 
-        function drawParticles() {
+        function desenharPontinhos() {
             ctx.clearRect(0, 0, width, height);
 
-            particles.forEach(p => {
+            pontinhos.forEach(p => {
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = particleColor;
+                ctx.fillStyle = pontinhosColor;
                 ctx.fill();
 
                 p.x += p.vx;
@@ -223,21 +225,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (p.y > height + p.radius) p.y = 0 - p.radius;
             });
 
-            requestAnimationFrame(drawParticles);
+            requestAnimationFrame(desenharPontinhos);
         }
 
         // inicia a animação
-        resizeCanvas();
-        initializeParticles();
-        drawParticles();
+        ajustarCanvas();
+        inicializarPontinhos();
+        desenharPontinhos();
 
         //para redimensionar o canvas se a janela mudar de tamanho
-        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('resize', ajustarCanvas);
     }
 
     //chamando a função para as seções que quero adicionar as partículas
-    criarParticulaDeAnimacao('contato', 'particle-canvas');
-    criarParticulaDeAnimacao('main-footer', 'footer-particle-canvas');
+    criarPontinhosDeAnimacao('contato', 'particle-canvas');
+    criarPontinhosDeAnimacao('main-footer', 'footer-particle-canvas');
 
 
 
