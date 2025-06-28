@@ -7,22 +7,16 @@
         max-width: 100%;
         background-color: var(--color-green-dark2);
         color: var(--color-rgb-contato);
-
         position: relative;
-        /* MUITO IMPORTANTE: Define o #contato como contêiner de posicionamento */
         z-index: 1;
-        /* Garante que o conteúdo de contato fique acima do canvas */
 
-        /* Estilos para o canvas */
         #particle-canvas {
             position: absolute;
-            /* Posiciona o canvas absolutamente dentro do #contato */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: 0;
-            /* Coloca o canvas atrás do conteúdo de contato */
         }
 
 

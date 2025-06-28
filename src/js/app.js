@@ -14,6 +14,8 @@ function toggleMenu() {
 }
 
 
+//---------Botões da seção de curiosidade---------
+
 
 //encontrar todas as curiosidades e os botões de próximo e anterior:
 const curiosidades = document.querySelectorAll('.curiosity-item');
@@ -73,24 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//validações do forumlário de contato
+//---------Validações do forumlário de contato---------
 
 function validarFormulario() {
     let nome = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let mensagem = document.getElementById('message').value;
-    let privacidade = document.getElementById('privacy').checked;
 
     let erroNome = document.getElementById('erro-nome');
     let erroEmail = document.getElementById('erro-email');
     let erroMensagem = document.getElementById('erro-mensagem');
-    let erroPrivacidade = document.getElementById('erro-privacidade');
 
     //para limpar mensagens de erros anteriores
     erroNome.textContent = '';
     erroEmail.textContent = '';
     erroMensagem.textContent = '';
-    erroPrivacidade.textContent = '';
 
     let formValido = true;
 
@@ -128,18 +127,22 @@ function validarFormulario() {
 
 
 
-//Animações 
+//---------Animações--------- 
+
+//essa linha: document.addEventListener('DOMContentLoaded', function ()) 
+//serve para garantir que o código só será executado quando todo o HTML já tiver sido carregado
 document.addEventListener('DOMContentLoaded', function () {
     const containerHero = document.querySelector('.container-hero');
     const mainNav = document.querySelector('nav');
 
     setTimeout(() => {
-        //para o container do hero
+        //adicionando a classe active para o container do hero
+
         if (containerHero) {
             containerHero.classList.add('active');
         }
 
-        //para a barra de navegação
+        //adcionando a classe active para a barra de navegação
         if (mainNav) {
             mainNav.classList.add('active');
         }

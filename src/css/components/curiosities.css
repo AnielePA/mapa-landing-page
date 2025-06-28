@@ -45,7 +45,7 @@
                     flex-direction: column;
                     gap: 25px;
                     padding: 20px;
-                    min-height: 750px;
+                    min-height: 791px;
 
                     &.active {
                         display: flex;
@@ -132,109 +132,128 @@
                 font-size: 2rem;
             }
 
-            .container .botoes-container button {
-                padding: 14px 35px;
-                font-size: 1.1rem;
-                max-width: 180px;
-            }
-        }
-
-        @media (min-width: 865px) {
-
-
             .container {
-                margin: 30px auto 0;
-                padding: 20px;
-
                 .container-curiosidades {
                     article.curiosity-item {
-                        flex-direction: row;
-                        align-items: center;
-                        padding: 30px;
+                        min-height: 825px;
+                    }
 
-                        .test-content {
-                            flex: 1;
-                            padding-right: 30px;
-                        }
+                }
 
-                        figure {
-                            flex: 1;
-                            max-width: 45%;
+                .botoes-container button {
+                    padding: 14px 35px;
+                    font-size: 1.1rem;
+                    max-width: 180px;
+                }
+
+            }
+
+            @media (min-width: 865px) {
+
+
+                .container {
+                    margin: 30px auto 0;
+                    padding: 20px;
+
+                    .container-curiosidades {
+                        article.curiosity-item {
+                            flex-direction: row;
+                            align-items: center;
+                            padding: 0 10px;
+                            min-height: 720px;
+
+
+
+                            .test-content {
+                                flex: 1;
+                                padding-right: 30px;
+                            }
+
+                            figure {
+                                flex: 1;
+                                max-width: 45%;
+                            }
+
+                            @media (min-width: 1000px) {
+                                min-height: 600px;
+                            }
                         }
+                    }
+                }
+
+                .p-apresentacao {
+                    font-size: 1.1rem;
+                    padding: 20px;
+                }
+
+                .container .container-curiosidades article.curiosity-item .test-content {
+                    h3 {
+                        font-size: 1.7rem;
+                    }
+
+                    p {
+                        font-size: 1.15rem;
+                        line-height: 1.8;
                     }
                 }
             }
 
-            .p-apresentacao {
-                font-size: 1.1rem;
-                padding: 20px;
-            }
 
-            .container .container-curiosidades article.curiosity-item .test-content {
-                h3 {
-                    font-size: 1.7rem;
+            @media (min-width: 1200px) {
+                padding: 90px 44px;
+
+
+
+                .title-curiosidades {
+                    font-size: 2.5rem;
+                    max-width: 1400px;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
 
-                p {
+                .p-apresentacao {
                     font-size: 1.15rem;
-                    line-height: 1.8;
+                    max-width: 1100px;
+                    margin: 30px auto;
+                    padding: 25px;
                 }
-            }
-        }
-
-
-        @media (min-width: 1200px) {
-            padding: 90px 44px;
 
 
 
-            .title-curiosidades {
-                font-size: 2.5rem;
-                max-width: 1400px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+                .container {
+                    max-width: 1100px;
+                    padding: 20px;
 
-            .p-apresentacao {
-                font-size: 1.15rem;
-                max-width: 1100px;
-                margin: 30px auto;
-                padding: 25px;
-            }
+                    .container-curiosidades {
+                        article.curiosity-item {
+                            min-height: 500px;
 
+                            .test-content {
+                                flex: 1.2;
+                            }
 
-
-            .container {
-                max-width: 1100px;
-                padding: 30px;
-
-                .container-curiosidades {
-                    article.curiosity-item {
-                        .test-content {
-                            flex: 1.2;
-                        }
-
-                        figure {
-                            flex: 0.8;
-                            max-width: 40%;
+                            figure {
+                                flex: 0.8;
+                                max-width: 40%;
+                            }
                         }
                     }
+
+                }
+
+                .container .botoes-container button {
+                    padding: 15px 40px;
+                    font-size: 1.15rem;
+                    max-width: 200px;
                 }
 
             }
 
-            .container .botoes-container button {
-                padding: 15px 40px;
-                font-size: 1.15rem;
-                max-width: 200px;
-            }
 
-        }
-
-
-        @media (min-width: 1600px) {
-            .container {
-                max-width: 1100px;
+            @media (min-width: 1600px) {
+                .container {
+                    max-width: 1100px;
+                }
             }
         }
     }

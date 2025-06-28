@@ -1,5 +1,6 @@
 @layer base {
 
+    /*Variáveis para utilizar no css*/
     :root {
         /*Backgrounds*/
         --background-body: linear-gradient(120deg, #f0f4c3 0%, #dff7c7 40%, #cad083 80%, #f0f4c3 100%);
@@ -65,7 +66,7 @@
     }
 
 
-
+    /*Configurações base do html e body*/
     html {
         min-height: 100vh;
         width: 100%;
