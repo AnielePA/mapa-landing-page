@@ -1,0 +1,15 @@
+@layer utilities {
+
+    /*Estilos para os elementos de todas as seções que vão ter uma animação*/
+    .animated-main-item {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+
+    .animated-main-item.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
