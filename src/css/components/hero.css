@@ -57,6 +57,13 @@
                 font-weight: 800;
                 cursor: pointer;
                 transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+
+                &:hover {
+                    background-color: var(--background-hover-btn-hero);
+                    transform: scale(1.05) translateY(-3px);
+                    box-shadow: var(--box-shadow-btn-hero);
+                }
             }
         }
 
@@ -89,12 +96,6 @@
                     margin-top: 45px;
                     font-size: 1rem;
                     padding: 15px;
-
-                    &:hover {
-                        background-color: var(--background-hover-btn-hero);
-                        transform: scale(1.05) translateY(-3px);
-                        box-shadow: var(--box-shadow-btn-hero);
-                    }
                 }
             }
         }
@@ -114,7 +115,7 @@
             .container-hero {
                 width: 100%;
                 max-width: 600px;
-                padding: 240px 0 32px 32px;
+                padding: 240px 0 120px 32px;
                 margin-left: 20px;
                 gap: 45px;
 
@@ -133,11 +134,6 @@
                     font-size: 1rem;
                     padding: 16px;
 
-                    &:hover {
-                        background-color: var(--background-hover-btn-hero);
-                        transform: scale(1.05) translateY(-3px);
-                        box-shadow: var(--box-shadow-btn-hero);
-                    }
                 }
             }
         }
